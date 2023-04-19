@@ -1,0 +1,14 @@
+logging:
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+spring:
+  rabbitmq:
+    host: 192.168.32.50
+    port: 5672
+    virtual-host: /zhangsan
+    username: zhangsan
+    password: 123456
+    listener:
+      simple:
+        # 每次只能获取一条消息，处理完成后才能领取下一消息
+        prefetch: 1
